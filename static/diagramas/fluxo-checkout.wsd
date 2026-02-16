@@ -1,0 +1,18 @@
+title Fluxo de Checkout
+participant Cliente
+participant API
+participant CheckoutService
+participant Estoque
+participant Pagamento
+participant Banco
+
+Cliente->API: POST /checkout
+API->CheckoutService: iniciar checkout
+CheckoutService->Estoque: reservar itens
+Estoque-->CheckoutService: reserva ok
+CheckoutService->Pagamento: cobrar
+Pagamento-->CheckoutService: pagamento aprovado
+CheckoutService->Banco: persistir pedido
+Banco-->CheckoutService: pedido criado
+CheckoutService-->API: sucesso
+API-->Cliente: 201 + pedido

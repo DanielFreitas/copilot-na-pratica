@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode/main/extensions/mcp/schemas/mcp.schema.json",
+  "servers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["./tools/filesystem-mcp.js"],
+      "enabled": false
+    }
+  }
+}

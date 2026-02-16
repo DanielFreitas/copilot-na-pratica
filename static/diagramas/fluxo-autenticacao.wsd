@@ -1,0 +1,12 @@
+title Fluxo de Autenticação
+participant Cliente
+participant API
+participant AuthService
+participant Banco
+
+Cliente->API: POST /auth/login (email, senha)
+API->AuthService: validar credenciais
+AuthService->Banco: buscar usuário
+Banco-->AuthService: usuário + hash
+AuthService-->API: token JWT
+API-->Cliente: 200 + token

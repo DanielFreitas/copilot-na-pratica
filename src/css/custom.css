@@ -1,0 +1,302 @@
+/**
+ * Custom CSS para "Copilot na Prática: O Guia que Faltava"
+ * Tema dark minimalista com paleta consistente dos SVGs
+ */
+
+:root {
+  --ifm-color-primary: #00d4ff;
+  --ifm-color-primary-dark: #00bfe6;
+  --ifm-color-primary-darker: #00b4d9;
+  --ifm-color-primary-darkest: #0094b3;
+  --ifm-color-primary-light: #1ad9ff;
+  --ifm-color-primary-lighter: #26dbff;
+  --ifm-color-primary-lightest: #4de1ff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 212, 255, 0.1);
+}
+
+/* Logo da navbar - tamanho controlado */
+.navbar__logo {
+  max-height: 32px;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  max-height: 32px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar__title {
+  display: flex;
+  align-items: center;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #00d4ff;
+  --ifm-color-primary-dark: #00bfe6;
+  --ifm-color-primary-darker: #00b4d9;
+  --ifm-color-primary-darkest: #0094b3;
+  --ifm-color-primary-light: #1ad9ff;
+  --ifm-color-primary-lighter: #26dbff;
+  --ifm-color-primary-lightest: #4de1ff;
+  --ifm-background-color: #0d0d0d;
+  --ifm-background-surface-color: #1a1a2e;
+}
+
+/* Vídeo Resumo - destaque azul */
+.video-resumo {
+  background-color: #1a1a2e;
+  border-left: 4px solid #00d4ff;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.video-resumo p:last-child {
+  margin-bottom: 0;
+}
+
+.video-resumo a {
+  color: #00d4ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.video-resumo a:hover {
+  text-decoration: underline;
+}
+
+/* Blockquotes - cores contextuais */
+blockquote {
+  border-left-width: 4px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+/* Anti-exemplo (❌ vermelho) */
+blockquote:has(strong:first-child:contains("❌")),
+blockquote strong:first-child:contains("❌") {
+  background-color: rgba(255, 107, 107, 0.15);
+  border-left-color: #ff6b6b;
+}
+
+blockquote p:first-of-type strong:first-child {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/* Exemplo bom (✅ verde) */
+blockquote:has(strong:first-child:contains("✅")),
+blockquote strong:first-child:contains("✅") {
+  background-color: rgba(74, 222, 128, 0.15);
+  border-left-color: #4ade80;
+}
+
+/* Warning/Aviso (⚠️ amarelo) */
+blockquote:has(strong:first-child:contains("⚠️")),
+blockquote strong:first-child:contains("⚠️") {
+  background-color: rgba(251, 191, 36, 0.15);
+  border-left-color: #fbbf24;
+}
+
+/* Atenção especial (🔥 azul) */
+blockquote:has(strong:first-child:contains("🔥")),
+blockquote strong:first-child:contains("🔥") {
+  background-color: rgba(0, 212, 255, 0.15);
+  border-left-color: #00d4ff;
+}
+
+/* SVG centering - diagramas sempre centralizados */
+img[src$='.svg'] {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajuste para imagens dentro de parágrafos */
+p img[src$='.svg'] {
+  display: block;
+  margin: 2rem auto;
+}
+
+/* Checklist - destaque verde */
+ul:has(li input[type="checkbox"]) {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul:has(li input[type="checkbox"]) li {
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+
+/* Code blocks - dark theme consistente */
+[data-theme='dark'] .prism-code {
+  background-color: #1a1a2e;
+}
+
+[data-theme='dark'] pre {
+  background-color: #1a1a2e;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Inline code */
+code {
+  background-color: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-size: 90%;
+}
+
+/* Headers - tom azul suave */
+h1, h2, h3, h4, h5, h6 {
+  color: #00d4ff;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6 {
+  color: #00d4ff;
+}
+
+/* Links */
+a {
+  color: #00d4ff;
+}
+
+a:hover {
+  color: #26dbff;
+}
+
+/* Sidebar - contraste melhorado */
+[data-theme='dark'] .menu__link {
+  color: #e0e0e0;
+}
+
+[data-theme='dark'] .menu__link--active {
+  color: #00d4ff;
+  background-color: rgba(0, 212, 255, 0.1);
+}
+
+[data-theme='dark'] .menu__link:hover {
+  background-color: rgba(0, 212, 255, 0.05);
+}
+
+/* Table of Contents */
+[data-theme='dark'] .table-of-contents__link {
+  color: #e0e0e0;
+}
+
+[data-theme='dark'] .table-of-contents__link--active {
+  color: #00d4ff;
+  font-weight: 600;
+}
+
+/* Cards (se houver) */
+.card {
+  background-color: #1a1a2e;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 8px;
+}
+
+/* Pagination */
+[data-theme='dark'] .pagination-nav__link {
+  border-color: rgba(0, 212, 255, 0.2);
+  background-color: #1a1a2e;
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  border-color: #00d4ff;
+  background-color: rgba(0, 212, 255, 0.1);
+}
+
+/* Footer */
+[data-theme='dark'] .footer {
+  background-color: #0d0d0d;
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Esconde os anchor links (#) dos headers */
+.hash-link {
+  opacity: 0;
+  pointer-events: none;
+}
+
+h1:hover .hash-link,
+h2:hover .hash-link,
+h3:hover .hash-link,
+h4:hover .hash-link,
+h5:hover .hash-link,
+h6:hover .hash-link {
+  opacity: 0;
+}
+
+/* Remove completamente o anchor link visual */
+.markdown h2 .hash-link,
+.markdown h3 .hash-link,
+.markdown h4 .hash-link {
+  display: none;
+}
+
+/* Responsivo - ajustes para mobile */
+@media screen and (max-width: 768px) {
+  .video-resumo {
+    padding: 0.75rem 1rem;
+  }
+  
+  blockquote {
+    padding: 0.75rem 1rem;
+  }
+  
+  img[src$='.svg'] {
+    margin: 1.5rem auto;
+  }
+}
+
+/* Episódio I - utilitários visuais do conteúdo */
+.kassia-quote {
+  border-left: 4px solid #00d4ff;
+  background: rgba(0, 212, 255, 0.08);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin: 1rem 0 1.5rem;
+  font-style: italic;
+}
+
+.entregavel-box {
+  border: 1px solid rgba(74, 222, 128, 0.45);
+  background: rgba(74, 222, 128, 0.08);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.exercicio-pratico {
+  border: 1px solid rgba(0, 212, 255, 0.45);
+  background: rgba(0, 212, 255, 0.08);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.anti-exemplo {
+  border: 1px solid rgba(255, 107, 107, 0.5);
+  background: rgba(255, 107, 107, 0.08);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.luke-momento {
+  border-left: 4px solid #fbbf24;
+  background: rgba(251, 191, 36, 0.08);
+  padding: 0.9rem 1.1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
