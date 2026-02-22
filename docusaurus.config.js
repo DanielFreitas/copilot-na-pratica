@@ -53,7 +53,7 @@ const config = {
         },
         items: [
           {
-            to: '/prologo/um-novo-treinamento',
+            to: '/episodio-01/prologo/um-novo-treinamento',
             position: 'left',
             label: 'O Caminho Jedi',
           },
