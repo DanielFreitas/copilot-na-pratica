@@ -174,7 +174,7 @@ Agente: O recurso de assinatura usa cache? Se tiver dúvida, verifique
         antes de responder N/A.
 
 Kássia: Deixa eu verificar... [consulta o repositório subscription-service]
-        Sim. O endpoint GET /subscriptions/{id} tem cache Redis.
+        Sim. O endpoint GET /subscriptions/\{id\} tem cache Redis.
         TTL de 600s.
 
 Agente: Como é invalidado quando o status da assinatura muda?
@@ -277,7 +277,7 @@ Status da assinatura é atualizado após cada tentativa.
 ## Cache
 
 ### Redis
-- Endpoint com cache: GET /subscriptions/{id} — TTL: 600s
+- Endpoint com cache: GET /subscriptions/\{id\} — TTL: 600s
 - 🔍 Estratégia de invalidação: verificar subscription-service ou time responsável
 
 ---

@@ -1,44 +1,81 @@
-# Copilot na Prática — Episódio I
+# Copilot na Pratica
 
-Curso narrativo sobre GitHub Copilot no VS Code, com foco em execução real para times de desenvolvimento.
+Treinamento narrativo e tecnico sobre uso profissional do GitHub Copilot no VS Code, com foco em execucao real de time.
 
-## Sobre
+## Visao geral
 
-No Episódio I, Kássia Oliveira pausa a guerra contra o Império para dominar o uso profissional de IA com método, contexto e governança.
+Este repositorio concentra o conteudo do curso em formato Docusaurus, com aulas em markdown, videos, diagramas e materiais de apoio para aplicar o metodo no trabalho diario.
 
-- 7 módulos
-- 26 lições
-- ~16h de conteúdo
-- Stack fixa dos exemplos: Python 3.13 + FastAPI + Docker + MongoDB/PostgreSQL/Redis
+Contexto editorial:
+- narrativa guiada por Kassia Oliveira
+- foco em contexto, prompt files, MCP (droids), memoria de squad e governanca
+- aplicacao pratica para devs, tech leads e squads
+
+## Status atual (Fev/2026)
+
+- Episodio I publicado: `18` licoes
+- Episodio II publicado: `26` licoes
+- Total publicado: `44` licoes
+
+Trilha atual:
+- Episodio I: fundamentos, holocrons, tecnicas, aliados e droids
+- Episodio II: ritual de discovery, droids da squad, spike, memoria, estilo e missao final
+
+## Stack e plataforma de referencia
+
+- Editor: VS Code
+- IA: GitHub Copilot
+- Site: Docusaurus
+- Stack tecnica usada nos exemplos: Python 3.13, FastAPI, Docker, PostgreSQL, MongoDB e Redis
 
 ## Como rodar local
 
-1. Instale dependências
+Pre-requisitos:
+- Node.js `>= 20`
+- npm
+
+Instalacao:
 
 ```bash
 npm install
 ```
 
-2. Suba em modo desenvolvimento
+Desenvolvimento local:
 
 ```bash
 npm start
 ```
 
-3. Gere build de produção
+Build de producao:
 
 ```bash
 npm run build
 ```
 
+Servir build localmente:
+
+```bash
+npm run serve
+```
+
 ## Estrutura principal
 
-- `docs/` → conteúdo do curso
-- `static/` → templates e recursos para download
-- `src/pages/` → página inicial e páginas auxiliares
-- `src/css/custom.css` → estilos globais
+- `docs/`: conteudo das aulas por episodio e capitulo
+- `static/`: videos, diagramas, skills e materiais estaticos
+- `src/pages/`: home e paginas customizadas
+- `src/css/custom.css`: estilos globais do site
+- `.vscode/`: configuracoes locais (incluindo MCP, quando aplicavel)
 
-## Referência editorial
+## Fluxo recomendado de manutencao editorial
 
-- Data de referência: Fevereiro/2026
-- Revisão recomendada: trimestral
+1. Atualizar conteudo em `docs/` e assets em `static/`.
+2. Rodar `npm start` para revisao visual.
+3. Rodar `npm run build` para validar compilacao antes de merge.
+4. Revisar links, rotas e coerencia da trilha no sidebar.
+
+## Objetivo do repositorio
+
+Este projeto nao e apenas um site de curso. Ele tambem funciona como base de referencia para:
+- padroes de trabalho com Copilot em squad
+- exemplos de artefatos de discovery e spike
+- estrutura de memoria operacional reaproveitavel entre demandas
